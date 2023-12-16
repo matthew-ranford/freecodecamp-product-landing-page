@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Landing Page</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <script
+      src="https://kit.fontawesome.com/7df5c05608.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header id="header">
+      <img
+        id="header-img"
+        src="images/fern-logo.jpg"
+        alt="Business Logo - Fern"
+        height="85"
+        width="85"
+      />
+      <h1 class="title">The Green Zone</h1>
+
+      <nav id="nav-bar">
+        <ul>
+          <li class="services">
+            <a class="nav-link" href="#service"> Services</a>
+          </li>
+          <li class="how-it-works">
+            <a class="nav-link" href="#how-it-works">How It Works</a>
+          </li>
+          <li class="price"><a class="nav-link" href="#price">Pricing</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h2>A Home, for your Vegetables</h2>
+      <form
+        id="form"
+        method="POST"
+        action="https://www.freecodecamp.com/email-submit"
+      >
+        <label id="email-label" for="email">
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="Enter your email address"
+            required
+          />
+        </label>
+        <input id="submit" type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <div class="main">
+      <div class="features" id="service">
+        <div class="icon">
+          <i class="fa-solid fa-fire-flame-curved" style="color: #00ff88"></i>
+        </div>
+        <div class="info">
+          <h4>Premium Materials</h4>
+          <p>
+            Our Greenhouses use the finest materials which are sourced locally.
+            This will increase the longevity of your purchase.
+          </p>
+        </div>
+      </div>
+
+      <div class="features">
+        <div class="icon">
+          <i class="fa-solid fa-truck-fast" style="color: #00ff88"></i>
+        </div>
+        <div class="info">
+          <h4>Fast Shipping</h4>
+          <p>
+            We make sure you receive your Greenhouse as soon as we have finished
+            making it. We also provide free returns if you are not satisfied.
+          </p>
+        </div>
+      </div>
+
+      <div class="features">
+        <div class="icon">
+          <i class="fa-solid fa-battery-full" style="color: #00ff88"></i>
+        </div>
+        <div class="info">
+          <h4>Quality Assurance</h4>
+          <p>
+            For every purchase you make, we will ensure there are no damages or
+            faults and we will send out a replacement asap if any issues arise.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="how-it-works">
+      <div>
+        <iframe
+          id="video"
+          width="600"
+          height="400"
+          src="https://www.youtube.com/embed/KsSI4w3CqEo"
+          title="The Beginner&#39;s Guide to Greenhouses"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <div id="price">
+      <div class="flex" id="small">
+        <div class="heading"><h3>Small Greenhouse</h3></div>
+        <h4>$500</h4>
+        <p>Beginner level</p>
+        <button>Buy</button>
+      </div>
+
+      <div class="flex" id="medium">
+        <div class="heading"><h3>Medium Greenhouse</h3></div>
+        <h4>$1000</h4>
+        <p>Intermediate level</p>
+        <button>Buy</button>
+      </div>
+
+      <div class="flex" id="large">
+        <div class="heading"><h3>Large Greenhouse</h3></div>
+        <h4>$1500</h4>
+        <p>Expert level</p>
+        <button>Buy</button>
+      </div>
+    </div>
+
+    <div class="footer">
+      <ul>
+        <li class="end">Privacy</li>
+        <li class="end">Terms</li>
+        <li class="end">Contact</li>
+      </ul>
+      <p>&copy;2023 GreenhouseGuy</p>
+    </div>
+  </body>
+</html>
+
+<!-- TODO 
+- Create sections and link to the "nav-link" navbar so it takes you to corresponding section
+- Look at putting in a <div> section above <header> section to make flex work or use grid // took a look at accessibility quiz and changed code around 
+
+
+---------- ICONS SECTION IS GOING OVER MY NAV BAR INSTEAD OF UNDER IT - NEED TO WORK THIS OUT!!!!!  ---- Figured this out; its because i had the transform:translate on ----
+
+-->
+
+<!-- Your product landing page should have a header element with a corresponding id="header"    DONE 07/05/23
+
+You can see an image within the header element with a corresponding id="header-img" (A logo would make a good image here)       DONE 07/05/23
+
+Within the #header element, you can see a nav element with a corresponding id="nav-bar"     DONE 07/05/23
+
+You can see at least three clickable elements inside the nav element, each with the class nav-link      DONE 07/05/23
+
+When you click a .nav-link button in the nav element, you are taken to the corresponding section of the landing page    DONE 18/05/23
+
+Your landing page has a form element with a corresponding id="form"   DONE 11/05/23 
+
+Within the form, there is an input field with id="email" where you can enter an email address   DONE 11/05/23 
+
+The #email input field should have placeholder text to let users know what the field is for   DONE 11/05/23 
+
+The #email input field uses HTML5 validation to confirm that the entered text is an email address   DONE 14/05/23
+
+Within the form, there is a submit input with a corresponding id="submit"   DONE 14/05/23
+
+When you click the #submit element, the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit)    DONE 14/05/23
+
+You can watch an embedded product video with id="video"   DONE 18/05/23
+
+The navbar should always be at the top of the viewport    DONE 07/05/23
+
+Your product landing page should have at least one media query    DONE 18/05/23  
+
+Your product landing page should utilize CSS flexbox at least once    DONE 07/05/23 -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Landing Page</title>
+    <link rel="stylesheet" href="FreeCodeCamp - Product Landing Page.css" />
+
+    <script
+      src="https://kit.fontawesome.com/7df5c05608.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header id="header">
+      <img
+        id="header-img"
+        src="Images/fern-logo.jpg"
+        alt="Business Logo - Fern"
+        height="85"
+        width="85"
+      />
+      <h1 class="title">The Green Zone</h1>
+
+      <nav id="nav-bar">
+        <ul>
+          <li class="nav-link services"><a href="#service"> Services</a></li>
+          <li class="nav-link how-it-works">
+            <a href="#how-it-works">How It Works</a>
+          </li>
+          <li class="nav-link price"><a href="#price">Pricing</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h2>A Home, for your Vegetables</h2>
+      <form
+        id="form"
+        method="POST"
+        action="https://www.freecodecamp.com/email-submit"
+      >
+        <label id="email-label" for="email">
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="Enter your email address"
+            required
+          />
+        </label>
+        <input id="submit" type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <div class="main">
+      <div class="features" id="service">
+        <div class="icon">
+          <i class="fa-solid fa-fire-flame-curved" style="color: #00ff88"></i>
+        </div>
+        <div class="info">
+          <h4>Premium Materials</h4>
+          <p>
+            Our Greenhouses use the finest materials which are sourced locally.
+            This will increase the longevity of your purchase.
+          </p>
+        </div>
+      </div>
+
+      <div class="features">
+        <div class="icon">
+          <i class="fa-solid fa-truck-fast" style="color: #00ff88"></i>
+        </div>
+        <div class="info">
+          <h4>Fast Shipping</h4>
+          <p>
+            We make sure you receive your Greenhouse as soon as we have finished
+            making it. We also provide free returns if you are not satisfied.
+          </p>
+        </div>
+      </div>
+
+      <div class="features">
+        <div class="icon">
+          <i class="fa-solid fa-battery-full" style="color: #00ff88"></i>
+        </div>
+        <div class="info">
+          <h4>Quality Assurance</h4>
+          <p>
+            For every purchase you make, we will ensure there are no damages or
+            faults and we will send out a replacement asap if any issues arise.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="how-it-works">
+      <div>
+        <iframe id="video"
+          width="600"
+          height="400"
+          src="https://www.youtube.com/embed/KsSI4w3CqEo"
+          title="The Beginner&#39;s Guide to Greenhouses"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <div id="price">
+      <div class="flex" id="small">
+        <div class="heading"><h3>Small Greenhouse</h3></div>
+        <h4>$500</h4>
+        <p>Beginner level</p>
+        <button>Buy</button>
+      </div>
+
+      <div class="flex" id="medium">
+        <div class="heading"><h3>Medium Greenhouse</h3></div>
+        <h4>$1000</h4>
+        <p>Intermediate level</p>
+        <button>Buy</button>
+      </div>
+
+      <div class="flex" id="large">
+        <div class="heading"><h3>Large Greenhouse</h3></div>
+        <h4>$1500</h4>
+        <p>Expert level</p>
+        <button>Buy</button>
+      </div>
+    </div>
+
+    <div class="footer">
+      <ul>
+        <li class="end">Privacy</li>
+        <li class="end">Terms</li>
+        <li class="end">Contact</li>
+      </ul>
+      <p>&copy;2023 GreenhouseGuy</p>
+    </div>
+  </body>
+</html> -->

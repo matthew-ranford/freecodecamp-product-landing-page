@@ -1,0 +1,282 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background-color: rgb(30, 100, 9); */
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.5) 50%
+    ),
+    url('Images/Greenhouse.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#header {
+  width: 100%;
+  height: 100px;
+  background-color: #1b1b32;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+}
+
+#header-img {
+  border: 10px;
+  background-color: rgb(39, 168, 39);
+  border-radius: 0 50% 0 50%;
+  box-shadow: 5px 5px 15px rgb(0, 255, 55);
+  padding: 5px;
+  margin-left: 1em;
+}
+
+.title {
+  margin-top: 0.8em;
+  font-size: 35px;
+  color: rgb(0, 255, 55);
+  text-shadow: 0.25em 0.15em 0.1em #058a8a;
+  width: 68%;
+}
+
+#nav-bar {
+  width: 50%;
+  max-width: 300px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-inline-start: 0;
+}
+
+nav ul a:hover {
+  color: rgb(0, 255, 55);
+  cursor: pointer;
+}
+
+.nav-link a {
+  color: inherit;
+}
+
+.nav-link {
+  color: #9a9aaa;
+  margin: 0 0.2rem;
+  padding: 0.2rem;
+  display: block;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+  margin-top: 50px;
+}
+
+h4 {
+  color: rgb(0, 255, 55);
+}
+
+h2 {
+  text-align: center;
+  margin-top: 5em;
+  color: rgb(0, 255, 55);
+}
+
+#email {
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+}
+
+input {
+  color: rgb(224, 215, 215);
+  background-color: #1b1b32;
+}
+
+input[type='submit'] {
+  display: flex;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  margin-left: 4em;
+  text-align: center;
+  background-color: #1b1b32;
+  color: rgb(224, 215, 215);
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.main {
+  margin-top: 5em;
+  margin-left: 200px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.features {
+  display: flex;
+  flex-basis: 100%;
+}
+
+.icon {
+  /* transform: translate(0, -15px); */
+  margin-top: 8px;
+}
+
+.info {
+  font-size: 25px;
+  margin-left: 15px;
+  /* transform: translate(0, -20px); */
+  margin-bottom: 20px;
+}
+
+.info p {
+  font-size: 15px;
+  color: rgb(224, 215, 215);
+}
+
+.fa-fire-flame-curved {
+  font-size: 60px;
+  margin-top: 5px;
+}
+
+.fa-truck-fast {
+  font-size: 35.8px;
+  margin-top: 20px;
+}
+
+.fa-battery-full {
+  font-size: 40px;
+  margin-top: 20px;
+}
+
+#video {
+  margin-top: 3em;
+  margin-left: 25%;
+}
+
+#price {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 3);
+  margin: 10px;
+  border: 1px solid #a59898;
+  border-radius: 3px;
+}
+
+.heading {
+  background-color: #6a6a6d;
+  color: rgb(224, 215, 215);
+  padding: 15px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.flex h4 {
+  color: rgb(0, 255, 55);
+}
+
+.flex p {
+  color: rgb(224, 215, 215);
+}
+
+.flex button {
+  padding: 8px 20px;
+  font-size: 20px;
+  background-color: rgb(228, 169, 8);
+  margin-bottom: 10px;
+}
+
+.flex button:hover {
+  background-color: rgba(255, 123, 0, 0.829);
+  transition: 1s;
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: 30px;
+  background-color: #b8b4b4;
+  padding: 20px;
+  text-decoration: none;
+}
+
+ul,
+p {
+  display: flex;
+  justify-content: flex-end;
+}
+
+li {
+  margin-left: 15px;
+  list-style: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (max-width: 800px) {
+  #video {
+    width: 500px;
+    overflow: hidden;
+    margin-left: 100px;
+  }
+
+  #main,
+  .features {
+    margin-left: -80px;
+  }
+
+  .nav-link {
+    margin-left: -20px;
+  }
+
+  .services,
+  .how-it-works,
+  .price {
+    flex-basis: 100%;
+    margin-left: 200px;
+  }
+
+  .title {
+    margin-left: 10px;
+  }
+}
+
+/* @media (min-width: 3500px) {
+  #video {
+    width: 1000px;
+    overflow: hidden;
+    margin: auto auto;
+  }
+
+  #main,
+  .features {
+    margin: auto auto;
+  }
+} */
